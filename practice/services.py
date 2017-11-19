@@ -63,7 +63,7 @@ class MNIST(BasePractice):
         MNIST.DROPOUT_RATE = tf.placeholder(tf.float32)
 
     def load_data(self, test=False, *params):
-        data_set = input_data.read_data_sets(MNIST.DATA_PATH, one_hot=True)
+        data_set = input_data.read_data_sets(MNIST.DATA_PATH, one_hot=True) # 서버로부터 MNIST DATA를 가져올 수 있다.
         if test:
             self.data = data_set.test
         else:

@@ -1,8 +1,10 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
+from django.contrib import admin
 
 from practice import views
 
 urlpatterns = [
+    url(r'^admin/',include(admin.site.urls)),
     url(r'^main/', views.Main.as_view(), name='main'),
 
     url(r'^(?P<practice_name>.+)/data/$', views.Data.as_view(), name='data'),

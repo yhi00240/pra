@@ -37,7 +37,7 @@ class Data(APIView):
         labels = []
         next = request.POST['next']
         for index in range(40*int(next)-39, 40*int(next)+1):
-            data = TrainData.objects.get(id=index)
+            data = TrainData.objects.get(idx=index)
             images.append(list(data.image))
             labels.append(data.label)
         return HttpResponse(json.dumps({'success': True, 'images': images, 'labels': labels}), content_type='application/json')

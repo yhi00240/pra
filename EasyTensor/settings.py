@@ -53,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
 ]
 
+# urls.py의 위치를 알게함
 ROOT_URLCONF = 'EasyTensor.urls'
 
 TEMPLATES = [
